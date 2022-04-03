@@ -154,7 +154,7 @@ h2 {
 
 .about {
 
-    padding: 2em 0em;
+    padding: 2em 0em 0em 0em;
 
     img {
         width: 100%;
@@ -186,6 +186,7 @@ h2 {
         object-fit: cover;
         position: relative;
         z-index: -200;
+        box-shadow: none;
     }
 
     .button {
@@ -199,14 +200,13 @@ h2 {
         img {
             width: 1.5em;
             margin-left: .6em;
+            box-shadow: none;
         }
     }
 
 }
 
 .residence {
-
-    padding: 2em 0em;
 
     .room_container {
 
@@ -244,6 +244,10 @@ h2 {
             width: 1.5em;
             margin-left: 0em;
         }
+    }
+
+    .room {
+        margin: 4em 0em;
     }
 
 }

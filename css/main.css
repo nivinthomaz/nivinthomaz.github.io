@@ -159,7 +159,7 @@ h2 {
 }
 
 .about {
-  padding: 2em 0em;
+  padding: 2em 0em 0em 0em;
 }
 
 .about img {
@@ -194,6 +194,8 @@ h2 {
      object-fit: cover;
   position: relative;
   z-index: -200;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .about .button {
@@ -207,10 +209,8 @@ h2 {
 .about .button img {
   width: 1.5em;
   margin-left: .6em;
-}
-
-.residence {
-  padding: 2em 0em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .residence .room_container {
@@ -250,5 +250,9 @@ h2 {
 .residence .button img {
   width: 1.5em;
   margin-left: 0em;
+}
+
+.residence .room {
+  margin: 4em 0em;
 }
 /*# sourceMappingURL=main.css.map */
