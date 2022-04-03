@@ -54,7 +54,7 @@ h1 {
   font-family: 'Playfair Display';
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 2em;
   color: #FFFCF2;
   line-height: 1.3em;
 }
@@ -63,7 +63,7 @@ h4 {
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 500;
-  font-size: .6em;
+  font-size: .8em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #3A3636;
@@ -73,7 +73,7 @@ h2 {
   font-family: 'Playfair Display';
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 2em;
   line-height: 1.3em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,8 +88,8 @@ h2 {
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 300;
-  font-size: .8em;
-  line-height: 1.5em;
+  font-size: 1em;
+  line-height: 1.8em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
