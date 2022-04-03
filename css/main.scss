@@ -1,1098 +1,252 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@100;200;400;500&display=swap');
-html {
-    scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500&family=Playfair+Display&display=swap');
 
 body {
     margin: 0;
-    font-family: poppins;
     padding: 0;
-
+    background-color: #FFFFFF;
 }
 
-h1 {
-    font-family: Playfair Display;
-    font-weight: bold;
-    font-size: 3em;
-    letter-spacing: 0.05em;
-    color: #264653;
-    margin-bottom: .2em;
-    margin-top: 0;
+.container {
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-h2 {
-    font-family: Playfair Display;
-    font-weight: bold;
-    font-size: 3em;
-    letter-spacing: 0.03em;
-    line-height: 1.2em;
-    color: #264653;
-    margin-bottom: .4em;
-    margin-top: 0;
-}
-
-h3 {
-    font-family: Playfair Display;
-    font-weight: bold;
-    font-size: 2em;
-    color: #264653;
-    margin: 0;
-    padding-bottom: .5em;
-    border-bottom-style: solid;
-    border-width: .01em;
-    border-color: rgba(38,70,83,0.50);
-}
-
-h4 {
-    font-weight: normal;
-    font-size: 1em;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #264653;
-    margin-bottom: .5em;
-    margin-top: 0;
-}
-
-.p1 {
-    font-weight: normal;
-    font-size: 1em;
-    letter-spacing: 0.12em;
-    color: #264653;
-    margin-bottom: 1.5em;
-    margin-top: 0;
-}
-
-.p2 {
-    font-weight: normal;
-    font-size: .9em;
-    letter-spacing: 0;
-    line-height: 1.5em;
-    color: #264653;
-    padding-top: 1em;
-    margin: 0;
-}
-
-.main_btn {
-    background-color: white;
-    border: 1px solid #E9C46A;
-    padding: 1em 2em;
-    font-family: poppins;
-    text-transform: uppercase;
-    font-size: 12px;
-    margin-top: 0em;
+.button {
+    
+    margin-top: 2em;
+    background-color: #3A3636;
+    border: 1px solid #D3B881;
+    color: #D3B881;
+    padding: 1em 3em;
+    font-size: .8em;
+    font-family: Noto Sans;
+    display: flex;
+    border-radius: 1em 0em;
     cursor: pointer;
+
+    img {
+        width: 1.5em;
+        margin-left: .6em;
+    }
 
     a {
         text-decoration: none;
-        color: #264653;
+        color: #D3B881;
+        display: flex;
     }
 }
 
-.navbar {
-
-    padding: 2em;
-
-    .social_container {
-        display: none;
-        .p3 {
-            color: #264653;
-        }
-    }
-
-    .supreme_nav {
-
-        display: none;
-        list-style-type: none;
-
-    li {
-
-        display: inline;
-        
-        a {
-            color: #264653;
-            text-decoration: none;
-            padding-left: 1em;
-        }
-    }
-
-    li:hover {
-        font-weight: 600;
-    }
+.button_small {
+    
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 1em;
+    border: 0.5px solid #D3B881;
+    background: #3A3636;
 }
 
-    nav {
-        display: none;
-        position: fixed;
-        z-index: 999;
+h1 {
+    margin: 0;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #FFFCF2;
+    line-height: 1.3em;
+}
+
+h4 {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: .6em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #3A3636;
+}
+
+h2 {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    display: flex;
+    align-items: center;
+    color: #D3B881;
+}
+
+.p1 {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: .8em;
+    line-height: 1.5em;
+    display: flex;
+    align-items: center;
+    color: #D3B881;
+}
+
+.mobile_nav {
+
+    header {
+
         width: 100%;
-        left: 0;
+        padding: 2em;
+        position: fixed;
         top: 0;
-        background-color: #264653;
-        height: 100vh;
-        padding: 3em 2em;
+        display: block;
+        background-color: #272727;
+        z-index: 999;
+    
+        h1 {
+            margin: 0;
+            float: left;
+            display: flex;
+            align-items: center;
+            color: aliceblue;
+            font-size: 1.4em;
+        }
     
         ul {
-            list-style-type:none;
-            margin-top: 1em;
-            padding: 0;
-        }
-    
-        li {
-    
-            a {
-                color: #E9C46A;
-                text-decoration:none;
-                display: block;
-                padding-top: .01em;
-                font-size: 3em;
-                text-align: left;
-                font-weight: 200;
-    
-                &:hover {
-                    color: #FFFFFF;
-                    font-weight: 400;
-                }
-            }
-        }
-    
-        .mobile_menu_close {
+            margin: 0;
+            width: 100px;
             float: right;
-            margin-right: 4em;
-            margin-top: .8em;
+            display: flex;
+            list-style-type: none;
             cursor: pointer;
         }
     
-        a {
-            text-decoration: none;
-            color: #E9C46A;
-    
-            &:hover {
-                color: #FFFFFF;
-            }
-        }
-    
-        .p3 {
-    
-            font-weight: normal;
-            font-size: .8em;
-            letter-spacing: 0.04em;
-            margin-bottom: 1em;
-            margin-top: 2em;
-            color: #FFFFFF;
-        }
-    
-        .socialmedia_icons {
-    
-            margin-top: 2em;
-            margin-bottom: 0em;
-            display: flex;
-            justify-content: left;
-            align-items: center;
-        }
-    }
-
-    .nav_container {
-        display: flex;
-        place-content: space-between;
-    }
-
-    .mobile_menu {
-        cursor: pointer;
-    }
-
-    .socialmedia_icons {
-
-        margin-top: 2.5em;
-        margin-bottom: 3em;
-        display: flex;
-        justify-content: left;
-        align-items: center;
-
-        a {
-            width: 24px;
-            height: 24px;
-            padding: 1em;
-            border: .5px solid rgba(233,196,106,0.25);
-        }
-
-        .call:hover {
-            background-color: #2D9C8E;
-        }
-    
-        .instagram:hover {
-            background-color: #2D9C8E;
-        }
-    
-        .map:hover {
-            background-color: #2D9C8E;
-        }
-
-    }
-    
-}
-
-nav.menu-btn {
-    display: block;
-}
-
-.socialmedia_sticky {
-
-    z-index: 100;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    padding-bottom: 2em;
-    padding-right: 2em;
-
-    .socialmedia_icons {
-
-        display: flex;
-        justify-content: right;
-        align-items: center;
-    
-        a {
-            width: 24px;
-            height: 24px;
-            padding: 1em;
-            border: .5px solid rgba(233,196,106,0.25);
-            background-color: #264653;
-        }
-    
-        .whatsapps:hover {
-            background-color: #2D9C8E;
-        }
-    
-        .instagram:hover {
-            background-color: #2D9C8E;
-        }
-    
-        .map:hover {
-            background-color: #2D9C8E;
+        li {
+            height: 32px;
         }
     
     }
-
 }
 
 .hero {
 
-    padding: 3em 2em 3em 2em;
-    animation: move_down 1s ease-in-out forwards;
-    opacity: 0;
+    width: 100wh;
+    height: 100vh;
 
-}
+    background-image: 
+    linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../images/hero_img.png');
 
-.hero_img {
+    background-size: cover;
+    background-position: center;
 
-    animation: introload 1s forwards;
-    animation: move_down 1.5s forwards;
-    opacity: 0;
-    
-    img {
-        width: 100%;
-        height: 440px;
-        object-fit: cover;
+    .flexbox {
+        position: absolute;
+        top: 65%;
+        left: 30%;
+        transform: translate(-30%, -65%);
     }
 
-}
-
-.stay {
-
-    padding: 5em 2em;
-
-    .room {
-        margin-top: 5em;
-        margin-bottom: 5em;
-
-        .content {
-            margin-top: 1.5em;
-        }
-    }
-
-    img {
-        width: 100%;
-    }
-
-}
-
-.container_booking {
-
-    margin-top: 4em;
-    padding: 1em;
-    border: .5px solid rgba(38,70,83,0.50);
-    transition: 0.5s;
-
-    .p2 {
-        line-height: 1.6em;
-        padding-top: 0;
-    }
-    
-    a {
-        text-decoration: none;
-        color: #E9C46A;
-    }
-}
-
-.container_booking:hover {
-    
-    background-color: #264653;
-
-    .p2 {
-        color: #FFFFFF;
-    }
-
-  }
-
-.experience_img {
-
-    .swiper {
-        width: 100%;
-        height: 300px;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .swiper-button-next {
-          color: #FFFFFF;
-          --swiper-navigation-size: 1.5em;
-          margin-right: 1em;
-      }
-
-      .swiper-button-prev {
-        color: #FFFFFF;
-        --swiper-navigation-size: 1.5em;
-        margin-left: 1em;
-    }
-    
 }
 
 .experience {
 
-    padding: 5em 2em;
-
-    h3 {
-        color: #FFFFFF;
-        border-bottom-style:none;
-        padding-bottom: 0;
+    padding: 4em 0em;
+    
+    h1 {
+        color: #3A3636;
     }
-
-    .p2 {
-        font-size: .8em;
-        color: #FFFFFF;
-        font-weight: 100;
-    }
-
-}
-
-.experience_swiper {
-    padding-left: 2em;
-
-    .swiper {
-        width: 100%;
-        height: 650px;
-      }
-
-      .swiper-slide {
-        text-align: left;
-        font-size: 18px;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 60%;
-        object-fit: cover;
-      }
-
-      .swiper-slide {
-        width: 80%;
-      }
-
-      .swiper-pagination {
-        text-align: left;
-        padding-bottom: 2em;
-        --swiper-theme-color: #E9C46A;
-    }
-
-    h3 {
-        color: #FFFFFF;
-        border-bottom-style:none;
-        padding-top: 1em;
-        padding-bottom: 0;
-    }
-
-    .p2 {
-        font-size: .8em;
-        color: #FFFFFF;
-        font-weight: 100;
-    }
-}
-
-.experience_background {
-
-    width: 100%;
-    height: 500px;
-    background-color: #264653;
-    position: relative;
-    z-index: -10;
-    margin-top: -32em;
+    
 }
 
 .about {
 
-    padding: 5em 2em;
-    //text-align: center;
+    padding: 2em 0em;
 
-}
-
-.video_wrapper {
-
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-
-     iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
+    img {
         width: 100%;
-        height: 100%;
-    }
-}
-
-.contact {
-    padding: 5em 2em;
-
-    iframe {
-        margin-top: 3em;
-    }
-}
-
-footer {
-
-    padding: 4em 2em;
-    background-color: #264653;
-    z-index: 200;
-    position: relative;
-
-
-    .footer_logo {
-        width: 120px;
     }
 
-    .primary_nav_footer {
+    h2 {
+        margin-top: 2em;
+    }
+
+    .about_img {
         display: none;
     }
 
-    .elixir_collection {
-        margin-top: 2em;
+    .about_bg {
+        width: 100%;
+        height: 480px;
+        margin-top: -25em;
+        background: #3A3636;
+        box-shadow: 0px 6px 32px 8px rgba(0, 0, 0, 0.25);
+        position: relative;
+        z-index: -100;
     }
 
-    .contacts {
-        margin-top: 2em;
+    .about_img_main {
+        
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        position: relative;
+        z-index: -200;
+    }
 
-        .mail {
-            margin-top: 2em;
+    .button {
+
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: -2em;
+
+        img {
+            width: 1.5em;
+            margin-left: .6em;
         }
     }
 
-    .p3 {
+}
 
-        font-weight: normal;
-        font-size: .8em;
-        letter-spacing: 0.04em;
-        color: #FFFFFF;
+.residence {
+
+    padding: 2em 0em;
+
+    .room_container {
+
+        padding: 2em;
+        background: #FFFCF2;
+        border-radius: 0px 40px 0px 0px;        
+    }
+
+    .room_container_stroke {
+        width: 100%;
+        height: 1em;
+        background-color: #D3B881;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    h2 {
         padding: 0;
         margin: 0;
+        color: #3A3636;
     }
 
     .p1 {
-        color: #E9C46A;
-        padding: 0;
-        margin: 0;
+        color: #3A3636;
     }
 
-    a {
-        text-decoration: none;
-        color: #E9C46A;
-    }
-
-    .socialmedia_icons {
-
-        margin-top: 2.5em;
-        margin-bottom: 3em;
+    .button {
         display: flex;
-        justify-content: left;
-        align-items: center;
-
-        a {
-            width: 24px;
-            height: 24px;
-            padding: 1em;
-            border: .5px solid rgba(233,196,106,0.25);
-        }
-
-        .call:hover {
-            background-color: #2D9C8E;
-        }
-    
-        .instagram:hover {
-            background-color: #2D9C8E;
-        }
-    
-        .map:hover {
-            background-color: #2D9C8E;
-        }
-
-    }
-
-}
-
-@media only screen and (min-width: 426px) {
-
-    .navbar {
-
-        padding: 2em 4em;
-
-        .mobile_menu_close {
-            padding-right: 4em;
-            margin-top: 1em;
-        }
-
-        nav {
-            padding: 3em 4em;
-        }
-    }
-    
-    .hero {
-        padding: 3em 4em;
-    }
-
-    .socialmedia_sticky {
-
-        padding-bottom: 4em;
-        padding-right: 4em;
-    
-    }
-
-    .stay {
-        padding: 5em 4em;
-    }
-
-    .experience_img {
-
-        .swiper {
-            height: 100%;
-          }
-    }
-
-    .experience {
-
-        padding: 5em 4em;
-    
-    }
-    
-    .experience_swiper {
-    
-        padding-left: 4em;
-
-        .swiper-pagination {
-
-            padding-bottom: 3em;
-
-        }
-
-    }
-
-    .about {
-        padding: 5em 4em;
-    }
-
-    .contact {
-        padding: 5em 4em;
-    }
-
-    footer {
-        padding: 5em 4em;
-    }
-
-}
-
-@media only screen and (min-width: 769px) {
-
-    .navbar {
-
-        padding: 2em 6em;
-
-        .social_container {
-            display: flex;
-            place-content: space-between;
-            padding-bottom: .5em;
-            border-bottom: rgba(233,196,106,0.75) solid 1px;
-        }
-
-        .logo {
-            margin-top: 2em;
-        }
-
-        .supreme_nav {
-
-            margin-top: 3.5em;
-            display: inline;
-            list-style-type: none;
-    
-        li {
-            
-            a {
-                color: #264653;
-                text-decoration: none;
-                padding-left: 1em;
-            }
-        }
-    
-    }
-
-        nav {
-            display: none;
-        }
-
-        .mobile_menu {
-            display: none;
-        }
-
-        ul {
-            display: block;
-        }
-
-    }
-    
-    .hero {
-        padding: 1.5em 6em;
-
-        h4 {
-            margin-bottom: .2em;
-        }
-
-        h1 {
-            margin-bottom: .1em;
-        }
-    }
-
-    .socialmedia_sticky {
-
-        padding-bottom: 4em;
-        padding-right: 6em;
-    
-    }
-
-    .hero_img {
-
-        padding: 3em 6em;
-        
-        img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-        }
-    
-    }
-
-    .stay {
-        padding: 5em 6em;
-
-        .room {
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            gap: 3em;
-            margin-bottom: 6em;
-            align-items: center;
-
-            .content {
-                text-align: left;
-                width: 100%;
-            }
-
-            img {
-                width: 100%;
-            }
-        }
-
-        .room.left {
-
-            grid-template-areas: "left right";
-
-            img {
-                grid-area: right;
-            }
-
-            .content {
-                text-align: right;
-                width: 100%em;
-            }
-        }
-
-        .container_booking {
-            text-align: center;
-        }
-
-    }
-
-    .experience {
-
-        padding: 5em 6em;
-    
-    }
-    
-    .experience_swiper {
-    
-        padding-left: 6em;
-
-    }
-
-    .about {
-
-        padding: 5em 6em;
-
-    }
-
-    .contact {
-        padding: 5em 6em;
-    }
-
-    footer {
-        padding: 5em 6em;
-
-        .primary_nav_footer {
-
-            //display: block;
-            list-style-type: none;
-            padding-top: 2em;
-            padding-bottom: 2em;
-            border-top: 1px solid rgba(233,196,106,0.50);
-            border-bottom: 1px solid rgba(233,196,106,0.50);
-            //text-align: center;
-            display: flex;
-            justify-content: center;
-
-            li {
-                display: inline;
-                a {
-                    padding-left: 1em;
-                    padding-right: 1em;
-                }
-            }
-
-
-        }
-
-        .align {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .elixir_collection {
-            text-align: center;
-            border-bottom: 1px solid rgba(233,196,106,0.50);
-            padding-bottom: 2em;
-        }
-
-        .evolve {
-            text-align: center;
-        }
-    }
-
-}
-
-@media only screen and (min-width: 1025px) {
-
-    .navbar {
-
-        padding: 2em 12em;
-
-    }
-
-    .hero {
-        padding: 1.5em 12em;
-    }
-
-    .hero_img {
-        padding: 3em 12em;
-    }
-
-    .socialmedia_sticky {
-
-        padding-bottom: 4em;
-        padding-right: 12em;
-    
-    }
-
-    .stay {
-
-        padding: 5em 12em;
-
-        .room {
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            gap: 5em;
-            margin-bottom: 8em;
-            align-items: center;
-
-            img {
-                width: 100%;
-            }
-
-            .content {
-                text-align: left;
-                width: 25vw;
-            }
-        }
-
-        .room.left {
-
-            grid-template-areas: "left right";
-
-            img {
-                grid-area: right;
-            }
-
-            .content {
-                text-align: right;
-                width: 25vw;
-                justify-self: right;
-            }
-        }
-    }
-
-    .experience {
-
-        padding: 5em 12em;
-    
-    }
-    
-    .experience_swiper {
-    
-        padding-left: 12em;
-
-        .swiper {
-            width: 100%;
-            height: 700px;
-          }
-
-        .swiper-pagination {
-
-            padding-bottom: 3em;
-        }
-
-        .p2 {
-            font-size: .9em;
-        }
-
-    }
-
-    .experience_background {
-        margin-top: -30em;
-    }
-
-    .about {
-        padding: 5em 12em 0em 12em;
-    }
-
-    .about_youtubeVideo {
-
-        padding: 5em 12em;
-
-    }
-
-    .contact {
-        padding: 5em 12em;
-    }
-
-    .footer {
-        padding: 5em 12em;
-    }
-
-    .p2 {
-        font-size: .9em;
-    }
-}
-
-@media only screen and (min-width: 1441px) {
-
-    .navbar {
-
-        padding: 2em 15em;
-    }
-
-    .hero {
-        padding: 1.5em 15em;
-    }
-
-    .hero_img {
-
-        padding: 3em 15em;
+        padding: 1em 1em;
 
         img {
-            height: 700px;
+            width: 1.5em;
+            margin-left: 0em;
         }
     }
-
-    .socialmedia_sticky {
-
-        padding-bottom: 4em;
-        padding-right: 15em;
-    
-    }
-
-    .stay {
-        padding: 5em 15em;
-        text-align: center;
-
-        .room {
-
-            padding-top: 0em;
-            margin-bottom: 0em;
-            margin-top: 8em;
-
-            .content {
-                width: 30vw;
-            }
-
-            img {
-                width: 100%;
-            }
-        }
-
-        .room.left {
-
-            grid-template-areas: "left right";
-
-            img {
-                grid-area: right;
-            }
-
-            .content {
-                text-align: right;
-                width: 30vw;
-            }
-        }
-
-    }
-
-    .container_booking {
-
-        margin-top: 10em;
-
-    }
-
-    .experience_img {
-
-        padding: 5em 15em;
-        
-    }
-
-    .experience {
-
-        padding: 5em 15em;
-    
-    }
-    
-    .experience_swiper {
-    
-        padding-left: 15em;
-
-        .swiper {
-            width: 100%;
-            height: 900px;
-        }
-
-        .swiper-slide {
-            width: 60%;
-        }
-
-        .swiper-pagination {
-
-            padding-bottom: 8em;
-        }
-
-        .p2 {
-            font-size: 1em;
-        }
-
-    }
-
-    .experience_background {
-        height: 600px;
-        margin-top: -40em;
-    }
-
-    .about {
-        padding: 5em 15em 2em 15em;
-    }
-
-    .about_youtubeVideo {
-
-        padding: 10em 25em 10em 25em;
-
-    }
-
-    .contact {
-        padding: 5em 15em;
-    }
-
-    .footer {
-        padding: 5em 15em;
-    }
-
-    .p2 {
-        font-size: 1em;
-    }
-
+      
 }
-
-@keyframes introload {
-
-    from {
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-    to {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-
-}
-
-@keyframes move_down {
-
-    from {
-        transform: translateY(-50px);
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-}
-
