@@ -170,17 +170,18 @@ h2 {
   padding: 2em 0em 0em 0em;
 }
 
-.about img {
-  width: 100%;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .about h2 {
   margin-top: 2em;
 }
 
-.about .about_img {
+.about .about_img_table img {
+  width: 100%;
+  border-radius: 40px 0px;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.about .about_img_table .not_visible {
   display: none;
 }
 
@@ -323,7 +324,7 @@ h2 {
 
 .exclusive_experiences .support_line {
   width: 160px;
-  margin-top: 1.5em;
+  margin-top: 3em;
   border-bottom: 0.5px solid #a4a4a4;
 }
 
@@ -397,7 +398,7 @@ h2 {
 }
 
 .footer {
-  padding: 4em 0em;
+  padding: 3em 0em;
   background-color: #FFFCF2;
 }
 
@@ -405,9 +406,79 @@ h2 {
   color: #3A3636;
 }
 
+.footer a {
+  text-decoration: none;
+  color: #D3B881;
+}
+
 .footer .support_line {
   margin: 3em 0;
   width: 160px;
   border-bottom: 0.5px solid #a4a4a4;
+}
+
+@media screen and (min-width: 426px) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .button {
+    margin-top: 3em;
+  }
+  h1 {
+    font-size: 2em;
+    line-height: 1.3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  .p1 {
+    font-size: 1em;
+  }
+  .about .about_img_table {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .about .about_img_table img {
+    width: 30%;
+  }
+  .about .about_img_table .not_visible {
+    display: block;
+  }
+  .about .about_img_table .visible {
+    margin-bottom: 4em;
+  }
+  .about .about_bg {
+    height: 500px;
+    margin-top: -25em;
+    background: #3A3636;
+  }
+  .gallery .swiper {
+    margin-left: 3.5em;
+    height: 400px;
+  }
+  .gallery .support_line {
+    right: 5em;
+  }
+  .exclusive_experiences .support_line {
+    width: 350px;
+  }
+  .exclusive_experiences .grid-container .support_line {
+    width: 350px;
+  }
+  .social {
+    padding: 2em 0em 4em 0em;
+  }
+  .social .support_line {
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

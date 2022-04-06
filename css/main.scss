@@ -164,17 +164,22 @@ h2 {
 
     padding: 2em 0em 0em 0em;
 
-    img {
-        width: 100%;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-
     h2 {
         margin-top: 2em;
     }
 
-    .about_img {
-        display: none;
+    .about_img_table {
+
+        img {
+            width: 100%;
+            border-radius: 40px 0px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .not_visible {
+            display: none;
+        }
+
     }
 
     .about_bg {
@@ -324,7 +329,7 @@ h2 {
 
     .support_line {
         width: 160px;
-        margin-top: 1.5em;
+        margin-top: 3em;
         border-bottom: .5px solid rgba(164, 164, 164, 1);
     }
 
@@ -404,11 +409,16 @@ h2 {
 
 .footer {
 
-    padding: 4em 0em;
+    padding: 3em 0em;
     background-color: #FFFCF2;
 
     h1 {
         color: #3A3636;
+    }
+
+    a {
+        text-decoration: none;
+        color: #D3B881;
     }
 
     .support_line {
@@ -417,6 +427,114 @@ h2 {
         width: 160px;
         border-bottom: .5px solid rgba(164, 164, 164, 1);
     
+    }
+
+}
+
+@media screen and (min-width: 426px) {
+
+    .container {
+
+        padding-left: 60px;
+        padding-right: 60px;
+
+    }
+
+    .button {
+    
+        margin-top: 3em;
+
+    }
+
+    h1 {
+        font-size: 2em;
+        line-height: 1.3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .p1 {
+        font-size: 1em;
+    }
+
+    .about {
+
+        .about_img_table {
+
+            display: flex;
+            gap: 2em;
+            justify-content: space-between;
+            align-items: flex-end;
+            
+    
+            img {
+                width: 30%;
+            }
+    
+            .not_visible {
+                display: block;
+            }
+
+            .visible {
+                margin-bottom: 4em;
+            }
+    
+        }
+
+        .about_bg {
+
+            height: 500px;
+            margin-top: -25em;
+            background: #3A3636;
+            
+        }
+
+    }
+
+    .gallery {
+
+        .swiper {
+            margin-left: 3.5em;
+            height: 400px;
+        }
+
+        .support_line {
+
+            right: 5em;
+
+        }
+
+    }
+
+    .exclusive_experiences {
+
+        .support_line {
+
+            width: 350px;
+            
+        }
+
+        .grid-container {
+            
+            .support_line {
+                width: 350px;
+            }
+        }
+
+    }
+
+    .social {
+    
+        padding: 2em 0em 4em 0em;
+
+        .support_line {
+
+            width: 300px;
+    
+        }
+
     }
 
 }
