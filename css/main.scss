@@ -86,52 +86,85 @@ h2 {
     color: #D3B881;
 }
 
-.desktop_nav {
+.flex {
+    display: flex;
+    gap: 1em;
+}
+
+.desktop_header {
     display: none;
 }
 
-.mobile_nav {
+.mobile_header {
 
-    header {
+    width: 80%;
+    height: auto;
+    position: fixed;
+    padding: 2em 2.5em;
+    right: 0;
 
-        width: 100%;
-        height: auto;
-        padding: 1.5em 2em;
-        background: rgba(255, 255, 255, 0.01);
-        backdrop-filter: blur(.6em);
-        position: fixed;
-        top: 0;
-        display: block;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+
+    .mobile_nav_toggle {
+
+        width: 34px;
+        height: 34px;
+        cursor: pointer;
         z-index: 999;
-        border-bottom: solid .75px  rgba(164, 164, 164, .2);
+        background: url("../images/hamburger.svg");
+        
+    }
 
-    
-        h1 {
-            margin: 0;
-            float: left;
-            display: flex;
-            align-items: center;
-            color: #D3B881;
-            font-size: 1.5em;
+    .mobile_nav_toggle[aria-expanded="true"] {
+        background: url("../images/close.svg");
+    }
+
+    .primary_navigation {
+
+        .logo {
+            margin-bottom: 5em;
         }
-    
-        ul {
-            margin: 0;
-            width: 100px;
-            float: right;
-            display: flex;
-            list-style-type: none;
-            cursor: pointer;
-        }
+
+        position: fixed;
+
+        margin: 0;
+        inset: 0;
+        gap: 2em;
+
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(.6em);
+
+
+        flex-direction: column;
+        padding: 2em 2.5em;
+
+        list-style: none;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease;
 
         a {
-            margin: 0;
-            padding: 0;
-            width: auto;
-            height: auto;
+            text-decoration: none;
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 2em;
+            color: #D3B881;
         }
-    
+
+        a:hover {
+            color: #FFFFFF;
+        }
+
     }
+
+    .primary_navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
 }
 
 .hero {
@@ -237,26 +270,12 @@ h2 {
 
         margin: 5em 0em;
 
-        img {
+        .room_img {
             width: 100%;
+            height: auto;
             display: block;
             object-fit: cover;
             border-radius: 40px 0px;
-        }
-    
-        h2 {
-            margin: 0;
-            padding: .5em 1em;
-            color: #FFFFFF;
-            font-size: 2em;
-
-        }
-    
-        .p1 {
-            margin: 0;
-            padding: .5em 2.5em;
-            color: #FFFFFF;
-            font-size: .8em;
         }
 
         .room_container {
@@ -264,6 +283,21 @@ h2 {
             height: auto;
             background: #3A3636;
             border-radius: 0px 40px 0px 0px;
+
+            h2 {
+                margin: 0;
+                padding: .5em 1em;
+                color: #FFFFFF;
+                font-size: 2em;
+    
+            }
+        
+            .p1 {
+                margin: 0;
+                padding: .5em 2.5em;
+                color: #FFFFFF;
+                font-size: .8em;
+            }
 
             .room_container_stroke {
 
@@ -393,7 +427,7 @@ h2 {
 
         .support_line {
 
-            width: 200px;
+            width: auto;
             margin-top: 0em;
             border-bottom: .5px solid rgba(0, 0, 0, .25);
         }
@@ -506,13 +540,11 @@ h2 {
 
     .support_line {
 
-        margin: 2em 0 1em 0;
+        margin: 2em 0 2em 0;
         width: 100%;
         border-bottom: .5px solid rgba(164, 164, 164, 1);
     
     }
-
-
 
 }
 
@@ -649,7 +681,7 @@ h2 {
 
         .support_line {
 
-            width: 25em;
+            width: 100%;
     
         }
 
@@ -664,7 +696,7 @@ h2 {
         padding-right: 6em;
     }
 
-    .desktop_nav {
+    .desktop_header {
 
         display: block;
         position: absolute;
@@ -750,7 +782,7 @@ h2 {
 
     }
 
-    .mobile_nav {
+    .mobile_header {
         display: none;
     }
 
@@ -799,32 +831,9 @@ h2 {
                 margin: 6em 0em;
                 align-items: stretch;
         
-        
-                img {
-                    width: 100%;
-                    display: block;
-                    object-fit: cover;
-                    border-radius: 40px 0px 0px 0px;
-                }
-            
-                h2 {
-                    margin: 0;
-                    padding: 1.5em 1em 0em 1em;
-                    color: #FFFFFF;
-                    font-size: 2em;
-        
-                }
-            
-                .p1 {
-                    margin: 0;
-                    padding: 2em 2.5em;
-                    color: #FFFFFF;
-                    font-size: .8em;
-                }
-        
                 .room_img {
 
-                    height: auto;
+                    border-radius: 40px 0px 0px 0px;
 
                 }
 
@@ -832,13 +841,24 @@ h2 {
 
                     display: grid;
 
+                    h2 {
+
+                        padding: 1.5em 1em 0em 1em;
+    
+                    }
+                
+                    .p1 {
+                        padding: 2em 2.5em;
+                    }
+
                     .button {
+
                         margin: 2em 2em 2em 2em;
-                        display: flex;
-                        padding: 1em 1em;
+
                     }
 
                     .room_container_stroke {
+
                         grid-area: 2;
                         align-self: flex-end;
 
@@ -852,7 +872,7 @@ h2 {
     
                 grid-template-areas: "left right";
     
-                img {
+                .room_img {
                     
                     grid-area: right;
                     border-radius: 0px 0px 40px 0px;
@@ -864,10 +884,13 @@ h2 {
                     border-radius: 0px 0px 0px 40px;
 
                     .room_container_stroke {
+
                         grid-area: 1;
                         align-self: flex-start;
+                        
                     }
                 }
+
             }
         }
     
@@ -1219,20 +1242,27 @@ h2 {
         .grid-container {
 
             .room {
-                
-                h2 {
-                    padding: 2.5em 2em 0em 2em;
-                }
-
-                .p1 {
-                    padding: 2em 4em;
-                    font-size: 1em;
-                }
 
                 .room_container {
 
+                    .room_content {
+                        padding: 5em;
+                    }
+
+                    h2 {
+
+                        padding: 1em 0;
+                    }
+    
+                    .p1 {
+    
+                        padding: 0em 0;
+                        font-size: 1em;
+                        
+                    }
+
                     .button {
-                        margin: 2em 2em 2em 5em;
+                        margin: 2em 0em;
                     }
 
                 }
@@ -1242,7 +1272,6 @@ h2 {
         }
 
     }
-
 
 }
 
