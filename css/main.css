@@ -297,7 +297,7 @@ h2 {
 }
 
 .gallery .swiper {
-  margin-left: 2.5em;
+  margin-left: 0em;
   margin-right: 0;
   padding: 3em 0em 3em 0em;
   width: 100hw;
@@ -326,7 +326,7 @@ h2 {
 }
 
 .gallery .swiper-pagination {
-  text-align: left;
+  text-align: center;
 }
 
 .gallery .swiper-pagination-bullet-active {
@@ -943,7 +943,7 @@ h2 {
 /* experience.html */
 .exp_hero {
   width: 100wh;
-  height: 80vh;
+  height: 70vh;
 }
 
 .exp_hero h1 {
@@ -952,10 +952,10 @@ h2 {
 
 .exp_hero .flexbox {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 32%;
-  -webkit-transform: translate(-32%, -50%);
-          transform: translate(-32%, -50%);
+  -webkit-transform: translate(-32%, -40%);
+          transform: translate(-32%, -40%);
 }
 
 .exp_youtube .container .video_wrapper {

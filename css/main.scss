@@ -306,7 +306,7 @@ h2 {
     }
 
     .swiper {
-        margin-left: 2.5em;
+        margin-left: 0em;
         margin-right: 0;
         padding: 3em 0em 3em 0em;
         width: 100hw;
@@ -334,7 +334,7 @@ h2 {
     }
     
     .swiper-pagination {
-        text-align: left;
+        text-align: center;
     }
     
     .swiper-pagination-bullet-active {
@@ -1251,7 +1251,7 @@ h2 {
 .exp_hero {
 
     width: 100wh;
-    height: 80vh;
+    height: 70vh;
 
     h1 {
         color: #3A3636;
@@ -1259,9 +1259,9 @@ h2 {
 
     .flexbox {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 32%;
-        transform: translate(-32%, -50%);
+        transform: translate(-32%, -40%);
     }
 
 }
