@@ -11,32 +11,14 @@
 
 <body>
 
-    <div class="mobile_nav">
-
-        <header>
-
-            <h1><a href="index.html"><img src="images/KondaiLip_logo.svg" alt=""></a></h1>
-    
-            <nav>
-    
-              <ul>
-                <li><img src="images/hamburger.svg" alt="Menu icon"></li>
-              </ul>
-    
-            </nav>
-    
-        </header>
-
-    </div>
-
-    <section class="desktop_nav">
+    <section class="desktop_header">
 
         <div class="grid-container">
 
             <div class="social_block">
 
-                <a href="#"><img src="images/instagram.svg" alt=""></a>
-                <a href="#"><img src="images/message.svg" alt=""></a>
+                <a href="https://www.instagram.com/kondai_lip_resort" target="blank"><img src="images/instagram.svg" alt=""></a>
+                <a href="#" target="blank"><img src="images/message.svg" alt=""></a>
                     
             </div>
 
@@ -59,10 +41,71 @@
                 <a href="residences.html">RESIDENCE</a>
                 <a href="ayurveda.html">AYURVEDA</a>
                 <a href="packages.html">PACKAGES</a>
-                <a href="#">CONTACT</a>
+                <a href="contact.html">CONTACT</a>
                 
             </div>
 
+        </div>
+
+    </section>
+
+    <header class="mobile_header flex">
+
+        <div class="nav_container">
+
+            <div class="logo">
+
+                <a href="index.html"><img src="images/KondaiLip_logo.svg" alt=""></a>
+    
+            </div>
+    
+            <a class="mobile_nav_toggle" aria-controls="primary_navigation" aria-expanded="false"></a>
+
+        </div>
+
+        <ul data-visible="false" id="primary_navigation" class="primary_navigation flex">
+
+            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="residences.html">RESIDENCE</a></li>
+            <li><a href="ayurveda.html">AYURVEDA</a></li>
+            <li><a href="packages.html">PACKAGES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+
+            <div class="support_line"></div>
+
+            <div class="socialmedia_icons">
+    
+                <a class="whatsapps" href="#" target="_blank">
+                    <div style="background-image: url(../images/message.svg); border-style: solid none solid solid;" class="icons"></div>
+                </a>
+    
+                <a class="instagram" href="https://www.instagram.com/kondai_lip_resort" target="_blank">
+                    <div style="background-image: url(../images/instagram.svg);" class="icons"></div>
+                </a>
+                
+            </div>
+        
+        </ul>
+
+    </header>
+
+    <section class="socialmedia_sticky">
+
+        <div>
+
+            <div class="socialmedia_icons">
+    
+                <a class="whatsapps" href="#" target="_blank">
+                    <div style="background-image: url(../images/message.svg); border-style: solid none solid solid;" class="icons"></div>
+                </a>
+    
+                <a class="instagram" href="https://www.instagram.com/kondai_lip_resort" target="_blank">
+                    <div style="background-image: url(../images/instagram.svg);" class="icons"></div>
+                </a>
+                
+            </div>
+            
         </div>
 
     </section>
@@ -363,8 +406,6 @@
 
             </div>
 
-        </div>
-
     </section>
 
     <section class="footer">
@@ -374,7 +415,7 @@
             <div class="logo">
                 <h1>Kondai Lip</h1>
                 <h3>An impeccable tradition combines with modern luxury at the backwaters of Kerala</h3>
-                <button class="button"><a href="#">Book Now<img src="images/Arrow_button.svg" alt=""></a></button>
+                <button class="button"><a href="#">Book Now<div class="arrow"></a></button>
 
             </div>
 
@@ -388,9 +429,9 @@
 
                 <div class="social_icons">
 
-                    <a class="instagram" href=""><img src="images/instagram_black.svg" alt="visit instagram"></a>
-                    <a class="whatsapp" href=""><img src="images/message_black.svg" alt="message on whatsapp"></a>
-                    <a class="map" href=""><img src="https://img.icons8.com/fluency-systems-regular/48/000000/marker--v1.png"/></a>
+                    <a href="https://www.instagram.com/kondai_lip_resort" target="blank"><div style="background-image: url(../images/instagram_black.svg); border-style: solid none solid solid;" class="icons"></div></a>
+                    <a href=""><div style="background-image: url(../images/message_black.svg); border-style: solid none solid solid;" class="icons"></div></a>
+                    <a  href="https://g.page/kondai-Lip?share" target="blank"><div style="background-image: url(../images/location_black.svg);" class="icons"></div></a>
                 
                 </div>
                 
@@ -398,11 +439,18 @@
 
             <div class="support_line"></div>
 
-            <h4 class="evolve">© 2022, Kondai lip, <a target="blank" href="https://www.instagram.com/evolvecreatives/">Made by evolve creatives</a> </h4>
+            <div class="align2">
+
+                <a href="terms&conditions.html"><h3>Terms & Conditions</h3></a>
+                <h4 class="evolve">© 2022, Kondai lip, <a target="blank" href="https://www.instagram.com/evolvecreatives/">Made by evolve creatives</a> </h4>
+            
+            </div>
 
         </div>
 
     </section>
+
+    <script src="js/nav.js"></script>
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
