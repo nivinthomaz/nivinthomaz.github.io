@@ -146,7 +146,7 @@ h2 {
 .mobile_header .primary_navigation {
   position: fixed;
   margin: 0;
-  inset: 11% 0 0 0;
+  inset: 6em 0 0 0;
   gap: 2em;
   z-index: 999;
   background: rgba(0, 0, 0, 0.5);
@@ -249,10 +249,10 @@ h2 {
 .hero {
   width: 100wh;
   height: 100vh;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5))), url("../images/hero_img.png");
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5)), url("../images/hero_img.png");
   background-size: cover;
   background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero .flexbox {
@@ -261,6 +261,26 @@ h2 {
   left: 32%;
   -webkit-transform: translate(-32%, -65%);
           transform: translate(-32%, -65%);
+}
+
+.hero .video_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.hero .mobile_bg {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero .desktop_bg {
+  display: none;
 }
 
 .experience {
@@ -750,6 +770,12 @@ h2 {
   }
   .hero .flexbox h1 {
     width: 12em;
+  }
+  .hero .mobile_bg {
+    display: none;
+  }
+  .hero .desktop_bg {
+    display: block;
   }
   .experience h1 {
     width: 12em;

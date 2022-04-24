@@ -102,6 +102,7 @@ h2 {
 .mobile_header {
 
     .nav_container {
+        
         width: 100%;
         height: auto;
         position: fixed;
@@ -140,7 +141,7 @@ h2 {
 
         margin: 0;
 
-        inset: 11% 0 0 0;
+        inset: 6em 0 0 0;
         gap: 2em;
 
         z-index: 999;
@@ -241,18 +242,40 @@ h2 {
     width: 100wh;
     height: 100vh;
 
-    background-image: 
-    linear-gradient(0deg, rgba(0, 0, 0, 0.5),),
-    url('../images/hero_img.png');
+    //background-image: 
+    //linear-gradient(0deg, rgba(0, 0, 0, 0.5),),
+    //url('../images/hero_img.png');
 
     background-size: cover;
     background-position: center;
+
+    position: relative;
+    overflow: hidden;
 
     .flexbox {
         position: absolute;
         top: 65%;
         left: 32%;
         transform: translate(-32%, -65%);
+    }
+
+    .video_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+
+    .mobile_bg {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .desktop_bg {
+        display: none;
     }
 
 }
@@ -864,6 +887,14 @@ h2 {
             top: 55%;
             left: 25%;
             transform: translate(-25%, -55%);
+        }
+
+        .mobile_bg {
+            display: none;
+        }
+
+        .desktop_bg {
+            display: block;
         }
     
     }
