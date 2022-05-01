@@ -147,7 +147,7 @@ h2 {
   position: fixed;
   margin: 0;
   inset: 6em 0 0 0;
-  gap: 2em;
+  gap: 1.5em;
   z-index: 999;
   background: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(0.5em);
@@ -180,7 +180,7 @@ h2 {
 }
 
 .mobile_header .primary_navigation .support_line {
-  margin-top: 1em;
+  margin: 1em 0em;
   border-bottom: 0.5px solid rgba(211, 184, 129, 0.25);
 }
 
@@ -544,6 +544,26 @@ h2 {
 }
 
 .youtube .container .video_wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.property_walk .container {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+.property_walk .container .wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-bottom: 0em;
+}
+
+.property_walk .container .wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -1057,33 +1077,20 @@ h2 {
 /* experience.html */
 .exp_hero {
   width: 100wh;
-  height: 70vh;
-}
-
-.exp_hero h1 {
-  color: #3A3636;
+  height: 75vh;
 }
 
 .exp_hero .flexbox {
   position: absolute;
   top: 40%;
-  left: 32%;
-  -webkit-transform: translate(-32%, -40%);
-          transform: translate(-32%, -40%);
+  left: 35%;
+  -webkit-transform: translate(-35%, -40%);
+          transform: translate(-35%, -40%);
 }
 
-.exp_youtube .container .video_wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-}
-
-.exp_youtube .container .video_wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.exp_hero .flexbox h1 {
+  color: #3A3636;
   width: 100%;
-  height: 100%;
 }
 
 .expereince_main .exp {
@@ -1111,30 +1118,39 @@ h2 {
   border-radius: 0px 40px 0px 40px;
 }
 
+.pro_walk {
+  margin-top: 2em;
+}
+
+.pro_walk .container {
+  padding: 0;
+  margin: 0;
+}
+
+.pro_walk .wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-bottom: 0em;
+}
+
+.pro_walk .wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (min-width: 769px) {
+  .exp_hero {
+    height: 80vh;
+  }
   .exp_hero .flexbox {
     top: 55%;
-    left: 25%;
-    -webkit-transform: translate(-25%, -55%);
-            transform: translate(-25%, -55%);
-  }
-  .exp_hero .flexbox h1 {
-    width: 12em;
-  }
-  .exp_youtube .container {
-    padding-left: 8em;
-    padding-right: 8em;
-  }
-  .exp_youtube .container .video_wrapper {
-    margin-bottom: 6em;
-  }
-  .canal_exp .content {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-  }
-  .canal_exp .content h2 {
-    margin-right: 2em;
+    left: 32%;
+    -webkit-transform: translate(-32%, -55%);
+            transform: translate(-32%, -55%);
   }
 }
 
@@ -1145,27 +1161,39 @@ h2 {
 }
 
 @media screen and (min-width: 1025px) {
-  .exp_hero .flexbox {
-    top: 55%;
-    left: 16%;
-    -webkit-transform: translate(-16%, -55%);
-            transform: translate(-16%, -55%);
-  }
-  .exp_youtube .container {
-    padding-left: 10em;
-    padding-right: 10em;
-  }
-  .exp_youtube .container .video_wrapper {
-    margin-bottom: 6em;
+  .container {
+    padding-left: 8em;
+    padding-right: 8em;
   }
   .expereince_main img {
     height: 25em;
   }
+  .pro_walk .container {
+    padding: 0em 8em 8em 8em;
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 1441px) {
+  .exp_hero {
+    height: 75vh;
+  }
+  .expereince_main .exp {
+    margin: 8em 0em;
+  }
   .expereince_main img {
     height: 35em;
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  .container {
+    padding-left: 12em;
+    padding-right: 12em;
+  }
+  .pro_walk .container {
+    padding: 0em 18em 8em 18em;
+    margin: 0;
   }
 }
 
@@ -1556,6 +1584,12 @@ h2 {
 }
 
 @media screen and (min-width: 1025px) {
+  .res_hero .flexbox h4 {
+    width: 100%;
+  }
+  .res_hero .flexbox h1 {
+    width: 100%;
+  }
   .res_residences .room .swiper {
     height: 550px;
   }

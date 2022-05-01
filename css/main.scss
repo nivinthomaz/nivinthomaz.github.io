@@ -142,7 +142,7 @@ h2 {
         margin: 0;
 
         inset: 6em 0 0 0;
-        gap: 2em;
+        gap: 1.5em;
 
         z-index: 999;
 
@@ -173,7 +173,7 @@ h2 {
 
         .support_line {
 
-            margin-top: 1em;
+            margin: 1em 0em;
             border-bottom: .5px solid rgba(211, 184, 129, .25);
 
         }
@@ -560,6 +560,33 @@ h2 {
         padding-right: 0em;
 
         .video_wrapper {
+
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-bottom: 0em;
+        
+             iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+
+}
+
+.property_walk {
+
+    .container {
+        
+        padding-left: 0em;
+        padding-right: 0em;
+
+        .wrapper {
 
             position: relative;
             padding-bottom: 56.25%;
@@ -1414,38 +1441,18 @@ h2 {
 .exp_hero {
 
     width: 100wh;
-    height: 70vh;
-
-    h1 {
-        color: #3A3636;
-    }
+    height: 75vh;
 
     .flexbox {
+
         position: absolute;
         top: 40%;
-        left: 32%;
-        transform: translate(-32%, -40%);
-    }
+        left: 35%;
+        transform: translate(-35%, -40%);
 
-}
-
-.exp_youtube {
-
-    .container {
-
-        .video_wrapper {
-
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-
-             iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
+        h1 {
+            color: #3A3636;
+            width: 100%;
         }
 
     }
@@ -1455,6 +1462,7 @@ h2 {
 .expereince_main {
 
     .exp {
+        
         margin: 5em 0em;
 
         .content {
@@ -1480,53 +1488,52 @@ h2 {
 
 }
 
+.pro_walk {
+
+    margin-top: 2em;
+
+    .container {
+        
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .wrapper {
+
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        margin-bottom: 0em;
+        
+        iframe {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+    }
+
+}
+
 
 @media screen and (min-width: 769px) {
 
     .exp_hero {
 
+        height: 80vh;
+
         .flexbox {
 
-            h1 {
-                width: 12em;
-            }
-
             top: 55%;
-            left: 25%;
-            transform: translate(-25%, -55%);
+            left: 32%;
+            transform: translate(-32%, -55%);
         }
         
-    }
-
-    .exp_youtube {
-
-        .container {
-
-            padding-left: 8em;
-            padding-right: 8em;
-    
-            .video_wrapper {
-
-                margin-bottom: 6em;
-
-            }
-    
-        }
-    
-    }
-
-    .canal_exp {
-
-        .content {
-
-            display: inline-flex;
-            
-            h2 {
-                margin-right: 2em;
-            }     
-
-        }
-
     }
 
 }
@@ -1534,55 +1541,83 @@ h2 {
 @media screen and (min-width: 820px) {
 
     .expereince_main {
+
         img {
             height: 20em;
         }
+
     }
 
 }
 
 @media screen and (min-width: 1025px) {
 
-    .exp_hero {
-    
-        .flexbox {
-            top: 55%;
-            left: 16%;
-            transform: translate(-16%, -55%);
-        }
-    
-    }
-
-    .exp_youtube {
-
-        .container {
-
-            padding-left: 10em;
-            padding-right: 10em;
-    
-            .video_wrapper {
-
-                margin-bottom: 6em;
-
-            }
-    
-        }
-    
+    .container {
+        padding-left: 8em;
+        padding-right: 8em;
     }
 
     .expereince_main {
+
         img {
             height: 25em;
         }
+
+    }
+
+    .pro_walk {
+    
+        .container {
+            
+            padding: 0em 8em 8em 8em;
+            margin: 0;
+    
+        }
+    
     }
 }
 
 @media screen and (min-width: 1441px) {
 
+
+    .exp_hero {
+
+        height: 75vh;
+        
+    }
+
     .expereince_main {
+
+        .exp {
+        
+            margin: 8em 0em;
+
+        }
+
         img {
             height: 35em;
         }
+        
+    }
+
+}
+
+@media screen and (min-width: 1650px) {
+
+    .container {
+        padding-left: 12em;
+        padding-right: 12em;
+    }
+
+    .pro_walk {
+    
+        .container {
+            
+            padding: 0em 18em 8em 18em;
+            margin: 0;
+    
+        }
+    
     }
 
 }
@@ -1909,6 +1944,7 @@ h2 {
     h1, h4 {
         color: #3A3636;
     }
+    
     width: 100wh;
     height: 80vh;
 
@@ -2117,6 +2153,21 @@ h2 {
 }
 
 @media screen and (min-width: 1025px) {
+
+    .res_hero {
+    
+        .flexbox {
+    
+            h4 {
+                width: 100%;
+            }
+    
+            h1 {
+                width: 100%;
+            }
+        }
+    
+    }
 
     .res_residences {
 
